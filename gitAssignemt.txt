@@ -1,0 +1,185 @@
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   css/site.css
+        new file:   fonts/segoeuil.ttf
+        new file:   img/cloneWhite.svg
+        new file:   img/deployWhite.svg
+        new file:   img/lightbulbWhite.svg
+        new file:   img/stackWhite.svg
+        new file:   img/successCloudNew.svg
+        new file:   img/tweetThis.svg
+        new file:   index.html
+
+
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (master)
+$ git commit -m "added code base"
+[master (root-commit) da83bea] added code base
+ 9 files changed, 198 insertions(+)
+ create mode 100644 css/site.css
+ create mode 100644 fonts/segoeuil.ttf
+ create mode 100644 img/cloneWhite.svg
+ create mode 100644 img/deployWhite.svg
+ create mode 100644 img/lightbulbWhite.svg
+ create mode 100644 img/stackWhite.svg
+ create mode 100644 img/successCloudNew.svg
+ create mode 100644 img/tweetThis.svg
+ create mode 100644 index.html
+
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git branch -M main
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git remote add origin https://github.com/manishkrverma5/DevOps_Practice.git
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git push -u origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (14/14), 460.43 KiB | 8.85 MiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/manishkrverma5/DevOps_Practice.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git branch newfeature
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git branch
+* main
+  newfeature
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git checkout newfeature
+Switched to branch 'newfeature'
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git status
+On branch newfeature
+nothing to commit, working tree clean
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ touch newfeature.html
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ cat newfeature.html
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ vi newfeature.html
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ cat newfeature.html
+We are implementing a new feature
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git status
+On branch newfeature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfeature.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git commit -am "added new feature"
+On branch newfeature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfeature.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git add .
+warning: LF will be replaced by CRLF in newfeature.html.
+The file will have its original line endings in your working directory
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git status
+On branch newfeature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   newfeature.html
+
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git commit -m "added new feature"
+[newfeature 1c441f8] added new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeature.html
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git push
+fatal: The current branch newfeature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin newfeature
+
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git push --set-upstream origin newfeature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 317.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'newfeature' on GitHub by visiting:
+remote:      https://github.com/manishkrverma5/DevOps_Practice/pull/new/newfeature
+remote:
+To https://github.com/manishkrverma5/DevOps_Practice.git
+ * [new branch]      newfeature -> newfeature
+branch 'newfeature' set up to track 'origin/newfeature'.
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (newfeature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git merge newfeature
+Updating da83bea..1c441f8
+Fast-forward
+ newfeature.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeature.html
+
+manis@INBook_X1_Pro MINGW64 /d/GitAssignment (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/manishkrverma5/DevOps_Practice.git
+   da83bea..1c441f8  main -> main
+
+
+
+Link to Github :  https://github.com/manishkrverma5/DevOps_Practice
